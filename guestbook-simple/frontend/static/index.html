@@ -3,19 +3,107 @@
 <head>
     <title>Guestbook</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin: 10px 0; }
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        #messageInput {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        #messageInput:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            background-color: #f8f9fa;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+                padding: 1rem;
+            }
+
+            .input-group {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Guestbook</h1>
-    <input id="messageInput" type="text" placeholder="Enter a message">
-    <button onclick="addMessage()">Submit</button>
-    <ul id="messageList"></ul>
+    <div class="container">
+        <h1>Guestbook</h1>
+        <div class="input-group">
+            <input id="messageInput" type="text" placeholder="Write your message here...">
+            <button onclick="addMessage()">Submit</button>
+        </div>
+        <ul id="messageList"></ul>
+    </div>
     <script src="script.js"></script>
-<body>
-        
-    
 </body>
 </html>
