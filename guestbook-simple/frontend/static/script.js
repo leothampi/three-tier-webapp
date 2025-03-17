@@ -1,4 +1,4 @@
-const apiUrl = 'http://127.0.0.1/messages';  // Replace with actual URL
+const apiUrl = 'https://three-tier-webapp-195183330861.us-central1.run.app/messages';  // Replace with actual URL
 
 function fetchMessages() {
     fetch(apiUrl)
